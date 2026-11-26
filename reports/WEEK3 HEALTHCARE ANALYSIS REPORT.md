@@ -143,3 +143,55 @@ The median results also showed that inpatient encounters had the highest median 
 The differences between average and median costs, particularly for emergency and urgent care encounters, further demonstrate the influence of highly variable and potentially extreme cost observations.
 
 All cost figures are presented in the dataset’s recorded units because the currency was not specified in the supplied data.
+7. Statistical Analysis and Findings
+
+7.1 Preliminary Statistical Tests
+
+The Kruskal–Wallis test produced a test statistic of 2025.19 with a p-value below 0.001. This provided preliminary evidence of differences in recorded total claim costs across encounter classes.
+
+Pairwise Mann–Whitney U tests with Bonferroni adjustment identified statistically significant differences in 14 of the 15 encounter-class comparisons. The comparison between ambulatory and emergency encounters was not statistically significant.
+
+However, further investigation revealed that many patients contributed multiple encounter records. Since observations from the same patient may be correlated, the independence assumption required by these preliminary tests may not have been satisfied. Therefore, these results were not treated as the main evidence for the research question.
+
+7.2 Generalised Estimating Equations Model
+
+A Generalised Estimating Equations (GEE) model was used to investigate differences in recorded total claim costs while accounting for repeated encounters from individual patients.
+
+The model included 27,891 encounter observations from 974 patients. Total claim costs were transformed using the natural logarithm of one plus the recorded cost. Ambulatory encounters were used as the reference category.
+
+The model estimated a within-patient working correlation of approximately 0.403, indicating positive correlation between repeated observations from the same patient.
+
+The results were as follows:
+
+Encounter Class	Coefficient	P-value	Statistical Significance
+Emergency	0.0006	0.998	No
+Inpatient	1.0719	Less than 0.001	Yes
+Outpatient	-0.3476	0.003	Yes
+Urgent care	-0.3957	0.042	Yes
+Wellness	0.9836	Less than 0.001	Yes
+
+Compared with ambulatory encounters, inpatient and wellness encounters had positive model coefficients, indicating higher recorded costs on the transformed outcome scale. Outpatient and urgent care encounters had negative coefficients, indicating lower recorded costs on that scale.
+
+The emergency encounter coefficient was not statistically significant (p = 0.998), suggesting that the model did not detect a statistically significant difference between emergency and ambulatory encounters.
+
+These results provide evidence that recorded healthcare costs vary across encounter classes, even after accounting for repeated observations from individual patients.
+
+7.3 Sensitivity Analysis
+
+A sensitivity analysis was conducted to assess the influence of patients with exceptionally high encounter frequencies. The ten patients above the 99th percentile of encounter frequency were excluded from the analysis.
+
+Although these patients represented approximately 1.03% of the unique patients, they contributed 5,759 encounters, representing approximately 20.65% of all encounter records.
+
+The sensitivity analysis included 22,132 encounters from 964 patients.
+
+The findings showed that:
+
+* Inpatient encounters remained statistically significant (p less than 0.001).
+* Outpatient encounters remained statistically significant (p = 0.002).
+* Wellness encounters remained statistically significant (p less than 0.001).
+* Urgent care encounters were no longer statistically significant (p = 0.142).
+* Emergency encounters remained statistically non-significant (p = 0.075).
+
+The urgent care finding was therefore sensitive to the exclusion of high-frequency patients. The emergency coefficient also changed substantially, indicating that its estimated relationship with ambulatory costs was influenced by the excluded observations, even though it remained statistically non-significant.
+
+Overall, the sensitivity analysis suggests that the findings for inpatient, outpatient and wellness encounters were more consistent, while the urgent care and emergency estimates require cautious interpretation.
