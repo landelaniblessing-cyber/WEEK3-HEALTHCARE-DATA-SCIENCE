@@ -11,6 +11,7 @@ This project analyses historical healthcare encounter data provided by AnalystLa
 The findings are intended to help hospital management and financial decision-makers better understand recorded encounter cost patterns and support evidence-based financial and operational planning.
 
 The analysis is limited to the information available in the supplied datasets. Therefore, the findings describe recorded costs and statistical associations rather than establish the causes of cost differences.
+
 2. Project Objectives and Research Question
 
 2.1 General Objective
@@ -29,6 +30,7 @@ To analyse variations in recorded healthcare encounter costs across different en
 2.3 Research Question
 
 Do recorded healthcare encounter costs differ significantly across different encounter classes?
+
 3. Dataset Description
 
 The project used six healthcare-related CSV datasets supplied by AnalystLab Africa. These datasets contained information about patient encounters, patients, medical procedures, healthcare payers, healthcare organisations and variable definitions.
@@ -54,6 +56,7 @@ The main variables used in the analysis included:
 * START and STOP: The recorded start and end dates of encounters.
 
 The encounters dataset contained 27,891 records representing 974 unique patients. It provided the primary information required to investigate differences in recorded healthcare costs across encounter classes.
+
 4. Data Preparation and Quality Assessment
 
 The datasets were uploaded into Google Colab and analysed using Python. The Pandas library was used for data loading, manipulation and summarisation, while NumPy supported numerical operations. Matplotlib and Seaborn were used for data visualisation, and SciPy and Statsmodels supported statistical analysis.
@@ -63,6 +66,7 @@ The encounters dataset was inspected to understand its structure, variable names
 Data quality checks were conducted on the key variables used in the analysis. The checks identified no missing values in the encounter identifier, encounter class, base encounter cost or total claim cost. No duplicate encounter identifiers were detected.
 
 The analysis also identified 89 encounters with a recorded total claim cost of zero, representing approximately 0.32% of all encounters. No negative total claim costs were found.
+
 5. Methodology
 
 5.1 Exploratory Data Analysis
@@ -97,6 +101,7 @@ A p-value threshold of 0.05 was used to assess statistical significance. Results
 The total claim cost variable showed substantial variation, including some exceptionally high recorded values. These observations were retained because the available data did not establish whether they were errors or legitimate high-cost encounters. Their potential influence was considered during the statistical analysis.
 
 Overall, the initial quality checks indicated that the key variables were complete and that encounter identifiers were unique. However, these checks do not establish that every field in the datasets is free from errors.
+
 6. Exploratory Data Analysis and Descriptive Findings
 
 6.1 Distribution of Healthcare Encounters
@@ -143,6 +148,7 @@ The median results also showed that inpatient encounters had the highest median 
 The differences between average and median costs, particularly for emergency and urgent care encounters, further demonstrate the influence of highly variable and potentially extreme cost observations.
 
 All cost figures are presented in the dataset’s recorded units because the currency was not specified in the supplied data.
+
 7. Statistical Analysis and Findings
 
 7.1 Preliminary Statistical Tests
@@ -191,6 +197,7 @@ The findings showed that:
 * Wellness encounters remained statistically significant (p less than 0.001).
 * Urgent care encounters were no longer statistically significant (p = 0.142).
 * Emergency encounters remained statistically non-significant (p = 0.075).
+* 
 8. Discussion
 
 The findings demonstrate that recorded healthcare costs differ across encounter classes. However, the differences are not explained by encounter frequency alone. Although ambulatory encounters represented the largest proportion of records, inpatient encounters had the highest average and median total claim costs.
@@ -209,6 +216,7 @@ Nevertheless, the results should be interpreted as associations within the suppl
 The urgent care finding was therefore sensitive to the exclusion of high-frequency patients. The emergency coefficient also changed substantially, indicating that its estimated relationship with ambulatory costs was influenced by the excluded observations, even though it remained statistically non-significant.
 
 Overall, the sensitivity analysis suggests that the findings for inpatient, outpatient and wellness encounters were more consistent, while the urgent care and emergency estimates require cautious interpretation.
+
 9. Recommendations and Limitations
 
 9.1 Recommendations
@@ -235,6 +243,7 @@ Third, the analysis identified repeated encounters from individual patients. Alt
 Fourth, the sensitivity analysis showed that some findings, particularly urgent care, were not consistent after excluding the ten highest-frequency patients.
 
 Finally, the analysis was observational and focused primarily on encounter class and recorded costs. It could not establish causation or fully explain why cost differences occurred.
+
 10. Conclusion
 
 This project analysed recorded healthcare encounter costs across six encounter classes using historical healthcare datasets provided by AnalystLab Africa.
