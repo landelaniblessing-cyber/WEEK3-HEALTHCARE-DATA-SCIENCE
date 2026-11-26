@@ -54,3 +54,16 @@ The main variables used in the analysis included:
 * START and STOP: The recorded start and end dates of encounters.
 
 The encounters dataset contained 27,891 records representing 974 unique patients. It provided the primary information required to investigate differences in recorded healthcare costs across encounter classes.
+4. Data Preparation and Quality Assessment
+
+The datasets were uploaded into Google Colab and analysed using Python. The Pandas library was used for data loading, manipulation and summarisation, while NumPy supported numerical operations. Matplotlib and Seaborn were used for data visualisation, and SciPy and Statsmodels supported statistical analysis.
+
+The encounters dataset was inspected to understand its structure, variable names, data types and record counts. The analysis focused on the encounter identifier, encounter class, patient identifier, base encounter cost and total claim cost.
+
+Data quality checks were conducted on the key variables used in the analysis. The checks identified no missing values in the encounter identifier, encounter class, base encounter cost or total claim cost. No duplicate encounter identifiers were detected.
+
+The analysis also identified 89 encounters with a recorded total claim cost of zero, representing approximately 0.32% of all encounters. No negative total claim costs were found.
+
+The total claim cost variable showed substantial variation, including some exceptionally high recorded values. These observations were retained because the available data did not establish whether they were errors or legitimate high-cost encounters. Their potential influence was considered during the statistical analysis.
+
+Overall, the initial quality checks indicated that the key variables were complete and that encounter identifiers were unique. However, these checks do not establish that every field in the datasets is free from errors.
