@@ -97,3 +97,49 @@ A p-value threshold of 0.05 was used to assess statistical significance. Results
 The total claim cost variable showed substantial variation, including some exceptionally high recorded values. These observations were retained because the available data did not establish whether they were errors or legitimate high-cost encounters. Their potential influence was considered during the statistical analysis.
 
 Overall, the initial quality checks indicated that the key variables were complete and that encounter identifiers were unique. However, these checks do not establish that every field in the datasets is free from errors.
+6. Exploratory Data Analysis and Descriptive Findings
+
+6.1 Distribution of Healthcare Encounters
+
+The analysis identified 27,891 healthcare encounters across six encounter classes. Ambulatory encounters were the most frequent, accounting for 12,537 records, followed by outpatient encounters with 6,300 records. Urgent care accounted for 3,666 encounters, emergency care for 2,322, wellness for 1,931 and inpatient care for 1,135.
+
+Encounter Class	Number of Encounters
+Ambulatory	12,537
+Outpatient	6,300
+Urgent care	3,666
+Emergency	2,322
+Wellness	1,931
+Inpatient	1,135
+Total	27,891
+
+These results indicate that ambulatory encounters represented the largest proportion of the available records, while inpatient encounters were the least frequent.
+
+6.2 Overall Healthcare Cost Distribution
+
+The descriptive analysis showed that the mean base encounter cost was 116.18, while the median was 136.80. Base encounter costs ranged from 85.55 to 146.18.
+
+For total claim costs, the mean was 3,639.68, compared with a median of 278.58. Recorded total claim costs ranged from zero to 641,882.70.
+
+The substantial difference between the mean and median total claim costs suggests a highly right-skewed distribution. This indicates that a relatively small number of encounters had exceptionally high recorded costs, increasing the overall average.
+
+These findings demonstrate why both mean and median values are important when examining healthcare cost data.
+
+6.3 Comparison of Costs Across Encounter Classes
+
+The descriptive statistics showed differences in average and median total claim costs across the six encounter classes.
+
+Encounter Class	Average Total Claim Cost	Median Total Claim Cost
+Ambulatory	2,894.11	573.98
+Emergency	4,629.65	146.18
+Inpatient	7,761.35	2,355.59
+Outpatient	2,237.30	278.58
+Urgent care	6,369.16	142.58
+Wellness	4,260.71	1,231.44
+
+Inpatient encounters recorded the highest average total claim cost of 7,761.35, followed by urgent care encounters at 6,369.16. Outpatient encounters had the lowest average total claim cost at 2,237.30.
+
+The median results also showed that inpatient encounters had the highest median total claim cost, while urgent care encounters had the lowest.
+
+The differences between average and median costs, particularly for emergency and urgent care encounters, further demonstrate the influence of highly variable and potentially extreme cost observations.
+
+All cost figures are presented in the dataset’s recorded units because the currency was not specified in the supplied data.
