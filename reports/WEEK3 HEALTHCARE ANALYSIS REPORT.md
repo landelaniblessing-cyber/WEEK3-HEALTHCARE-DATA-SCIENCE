@@ -29,3 +29,28 @@ To analyse variations in recorded healthcare encounter costs across different en
 2.3 Research Question
 
 Do recorded healthcare encounter costs differ significantly across different encounter classes?
+3. Dataset Description
+
+The project used six healthcare-related CSV datasets supplied by AnalystLab Africa. These datasets contained information about patient encounters, patients, medical procedures, healthcare payers, healthcare organisations and variable definitions.
+
+The datasets consisted of:
+
+Dataset	Number of Records	Number of Variables
+Encounters	27,891	14
+Patients	974	20
+Procedures	47,701	9
+Payers	10	7
+Organizations	1	8
+Data Dictionary	65	3
+
+The encounters dataset was the primary dataset used for the cost analysis. It contained information about encounter dates, encounter classes, encounter descriptions, base encounter costs, total claim costs and payer coverage.
+
+The main variables used in the analysis included:
+
+* ENCOUNTERCLASS: The category of healthcare encounter.
+* BASE_ENCOUNTER_COST: The recorded base cost associated with an encounter.
+* TOTAL_CLAIM_COST: The recorded total claim cost.
+* PATIENT: The identifier used to distinguish individual patients and account for repeated encounters.
+* START and STOP: The recorded start and end dates of encounters.
+
+The encounters dataset contained 27,891 records representing 974 unique patients. It provided the primary information required to investigate differences in recorded healthcare costs across encounter classes.
