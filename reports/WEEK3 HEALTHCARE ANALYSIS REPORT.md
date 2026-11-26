@@ -63,7 +63,37 @@ The encounters dataset was inspected to understand its structure, variable names
 Data quality checks were conducted on the key variables used in the analysis. The checks identified no missing values in the encounter identifier, encounter class, base encounter cost or total claim cost. No duplicate encounter identifiers were detected.
 
 The analysis also identified 89 encounters with a recorded total claim cost of zero, representing approximately 0.32% of all encounters. No negative total claim costs were found.
+5. Methodology
 
+5.1 Exploratory Data Analysis
+
+Exploratory data analysis was conducted to understand the distribution of healthcare encounters and the characteristics of recorded costs. Encounter frequencies were calculated to identify the most common encounter classes.
+
+Descriptive statistics, including the mean, median, standard deviation, minimum and maximum values, were used to examine the distribution of base encounter costs and total claim costs.
+
+5.2 Data Visualisation
+
+Five visualisations were produced to explore the cost patterns:
+
+1. Histogram showing the distribution of base encounter costs.
+2. Histogram showing the distribution of total claim costs.
+3. Bar chart comparing average total claim costs across encounter classes.
+4. Boxplot comparing total claim costs across encounter classes.
+5. Boxplot using a symmetric logarithmic scale to make differences in the highly variable cost distribution easier to examine.
+
+5.3 Statistical Analysis
+
+The Kruskal–Wallis test was initially used to assess whether recorded total claim costs differed across encounter classes. Pairwise Mann–Whitney U tests with Bonferroni adjustment were also conducted as preliminary comparisons.
+
+Further investigation showed that individual patients contributed multiple encounter records. To account for the correlation between repeated encounters belonging to the same patient, a Generalised Estimating Equations (GEE) model was fitted.
+
+The outcome variable, total claim cost, was transformed using the natural logarithm of one plus the recorded cost. Encounter class was included as the explanatory variable, with ambulatory encounters serving as the reference category. An exchangeable working correlation structure and robust standard errors were used.
+
+A sensitivity analysis was also conducted by excluding the ten patients with the highest encounter frequencies. This assessed whether the main findings were substantially influenced by a small group of very frequent patients.
+
+5.4 Statistical Significance
+
+A p-value threshold of 0.05 was used to assess statistical significance. Results were interpreted alongside the estimated coefficients and confidence intervals. The analysis was designed to identify associations between encounter class and recorded costs, rather than establish causation.
 The total claim cost variable showed substantial variation, including some exceptionally high recorded values. These observations were retained because the available data did not establish whether they were errors or legitimate high-cost encounters. Their potential influence was considered during the statistical analysis.
 
 Overall, the initial quality checks indicated that the key variables were complete and that encounter identifiers were unique. However, these checks do not establish that every field in the datasets is free from errors.
