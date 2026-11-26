@@ -209,3 +209,29 @@ Nevertheless, the results should be interpreted as associations within the suppl
 The urgent care finding was therefore sensitive to the exclusion of high-frequency patients. The emergency coefficient also changed substantially, indicating that its estimated relationship with ambulatory costs was influenced by the excluded observations, even though it remained statistically non-significant.
 
 Overall, the sensitivity analysis suggests that the findings for inpatient, outpatient and wellness encounters were more consistent, while the urgent care and emergency estimates require cautious interpretation.
+9. Recommendations and Limitations
+
+9.1 Recommendations
+
+Based on the findings, the following recommendations are proposed:
+
+1. Monitor costs by encounter class: Hospital management should regularly review recorded costs across ambulatory, inpatient, outpatient, emergency, urgent care and wellness services to identify differences and unusual patterns.
+2. Investigate high-cost encounters: Encounters with exceptionally high recorded costs should be reviewed to determine whether they reflect legitimate complex care, unusual service utilisation or possible data recording issues.
+3. Improve financial planning: The differences in recorded costs across encounter classes should be considered when preparing departmental budgets and allocating healthcare resources.
+4. Strengthen patient-level analysis: Future cost analyses should account for patients with repeated encounters to reduce the risk of misleading conclusions caused by treating correlated observations as independent.
+5. Improve data quality and documentation: Healthcare organisations should maintain complete and consistent records of encounter costs, service categories and payer information. Clear documentation of currency and cost definitions would also improve financial interpretation.
+6. Conduct further investigation: Future studies should examine additional factors such as patient characteristics, diagnoses, procedures, length of stay and service utilisation to better understand the factors associated with cost differences.
+
+9.2 Limitations
+
+The project had several limitations.
+
+First, the analysis relied on the datasets supplied by AnalystLab Africa. The findings may not represent all healthcare organisations or healthcare settings.
+
+Second, the currency and detailed accounting definitions of the recorded cost variables were not specified. Therefore, the cost values were interpreted in their recorded units rather than assigned a specific currency.
+
+Third, the analysis identified repeated encounters from individual patients. Although GEE was used to account for within-patient correlation, the very uneven number of encounters across patients may still influence the estimates.
+
+Fourth, the sensitivity analysis showed that some findings, particularly urgent care, were not consistent after excluding the ten highest-frequency patients.
+
+Finally, the analysis was observational and focused primarily on encounter class and recorded costs. It could not establish causation or fully explain why cost differences occurred.
