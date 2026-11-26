@@ -235,3 +235,14 @@ Third, the analysis identified repeated encounters from individual patients. Alt
 Fourth, the sensitivity analysis showed that some findings, particularly urgent care, were not consistent after excluding the ten highest-frequency patients.
 
 Finally, the analysis was observational and focused primarily on encounter class and recorded costs. It could not establish causation or fully explain why cost differences occurred.
+10. Conclusion
+
+This project analysed recorded healthcare encounter costs across six encounter classes using historical healthcare datasets provided by AnalystLab Africa.
+
+The analysis identified differences in recorded total claim costs across encounter classes. Inpatient encounters had the highest average and median total claim costs, while outpatient encounters had the lowest average total claim cost.
+
+The GEE model provided evidence of statistically significant differences in recorded costs for inpatient, outpatient and wellness encounters compared with ambulatory encounters. The sensitivity analysis showed that these findings remained statistically significant after excluding the ten patients with the highest encounter frequencies. However, the urgent care finding was not consistent, and no statistically significant difference was established for emergency encounters.
+
+The project also demonstrated the importance of data quality assessment, exploratory data analysis, appropriate statistical methods and sensitivity analysis when investigating healthcare costs.
+
+Overall, the findings provide useful insights into recorded healthcare cost patterns and demonstrate how data science techniques can support evidence-based financial and operational planning in healthcare organisations. Further analysis incorporating additional patient, clinical and service-related variables would help provide a more comprehensive understanding of the factors associated with healthcare costs.
