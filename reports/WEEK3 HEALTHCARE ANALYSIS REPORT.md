@@ -191,7 +191,21 @@ The findings showed that:
 * Wellness encounters remained statistically significant (p less than 0.001).
 * Urgent care encounters were no longer statistically significant (p = 0.142).
 * Emergency encounters remained statistically non-significant (p = 0.075).
+8. Discussion
 
+The findings demonstrate that recorded healthcare costs differ across encounter classes. However, the differences are not explained by encounter frequency alone. Although ambulatory encounters represented the largest proportion of records, inpatient encounters had the highest average and median total claim costs.
+
+The higher recorded costs associated with inpatient encounters may reflect the greater resources and services involved in hospital admissions. However, the available data do not contain sufficient information to establish the specific reasons for these differences.
+
+The analysis also revealed substantial variation in total claim costs. The difference between the mean and median suggests that a relatively small number of high-cost encounters influenced the overall cost distribution. This highlights the importance of examining both average and typical costs when making financial decisions.
+
+An important finding was the presence of repeated encounters among individual patients. Since 974 patients contributed 27,891 encounters, treating every encounter as an independent observation could lead to misleading statistical conclusions. The GEE model addressed this concern by accounting for clustering of encounters within patients.
+
+The sensitivity analysis further demonstrated the importance of examining influential observations. Inpatient, outpatient and wellness findings remained statistically significant after excluding the ten highest-frequency patients. However, the urgent care result was no longer statistically significant, suggesting that this finding was less consistent.
+
+For hospital management, these findings demonstrate the potential value of routinely monitoring healthcare costs by encounter class. Such monitoring could support financial planning, identification of unusual cost patterns and more informed allocation of resources.
+
+Nevertheless, the results should be interpreted as associations within the supplied dataset. They do not establish that encounter class itself causes differences in healthcare costs.
 The urgent care finding was therefore sensitive to the exclusion of high-frequency patients. The emergency coefficient also changed substantially, indicating that its estimated relationship with ambulatory costs was influenced by the excluded observations, even though it remained statistically non-significant.
 
 Overall, the sensitivity analysis suggests that the findings for inpatient, outpatient and wellness encounters were more consistent, while the urgent care and emergency estimates require cautious interpretation.
